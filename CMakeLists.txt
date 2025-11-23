@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.24)
 
-project(hello_world)
+project(triangle-number-calculator)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -15,7 +15,7 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(Catch2)
 
-add_executable(hello_test tests/hello_test.cpp src/hello.cpp)
-add_executable(main main.cpp src/hello.cpp)
+add_executable(triangleNumberCalculator_test tests/triangleNumberCalculator_test.cpp src/triangleNumberCalculator.cpp)
+add_executable(main main.cpp src/triangleNumberCalculator.cpp)
 
-target_link_libraries(hello_test PRIVATE Catch2::Catch2WithMain)
+target_link_libraries(triangleNumberCalculator_test PRIVATE Catch2::Catch2WithMain)
